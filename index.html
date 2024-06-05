@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duvan Aldrey Garcia Marimon - Página Personal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+        }
+        nav a {
+            color: #fff;
+            padding: 1em;
+            text-decoration: none;
+        }
+        section {
+            display: none;
+            padding: 2em;
+        }
+        .active {
+            display: block;
+        }
+        .products, .other-products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2em;
+            justify-content: center;
+        }
+        .product, .other-product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 1em;
+            width: 300px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Duvan Aldrey Garcia Marimon</h1>
+    <p>Estudiante de Ingeniería de Sistemas | Técnico Metalmecánico | Asesor Comercial</p>
+</header>
+
+<nav>
+    <a href="#" onclick="showSection('about')">Acerca de mí</a>
+    <a href="#" onclick="showSection('products')">Productos</a>
+    <a href="#" onclick="showSection('other-products')">Otros Productos</a>
+    <a href="#" onclick="showSection('contact')">Contacto</a>
+</nav>
+
+<section id="about" class="active">
+    <h2>Acerca de mí</h2>
+    <p>Hola, soy Duvan Aldrey Garcia Marimon, un apasionado estudiante de Ingeniería de Sistemas de Medellín, Colombia. Me encanta leer, dibujar y aprender sobre tecnología. Además, tengo experiencia como técnico metalmecánico y asesor comercial.</p>
+</section>
+
+<section id="products">
+    <h2>Productos</h2>
+    <div class="products">
+        <div class="product">
+            <h3>Producto 1</h3>
+            <p>Descripción del Producto 1.</p>
+        </div>
+        <div class="product">
+            <h3>Producto 2</h3>
+            <p>Descripción del Producto 2.</p>
+        </div>
+        <!-- Puedes agregar más productos aquí -->
+    </div>
+</section>
+
+<section id="other-products">
+    <h2>Otros Productos</h2>
+    <div class="other-products">
+        <div class="other-product">
+            <h3>Otro Producto 1</h3>
+            <p>Descripción de Otro Producto 1.</p>
+        </div>
+        <div class="other-product">
+            <h3>Otro Producto 2</h3>
+            <p>Descripción de Otro Producto 2.</p>
+        </div>
+        <!-- Puedes agregar más otros productos aquí -->
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contacto</h2>
+    <form>
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name" required><br>
+        <label for="email">Correo Electrónico:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="message">Mensaje:</label><br>
+        <textarea id="message" name="message" required></textarea><br>
+        <input type="submit" value="Enviar">
+    </form>
+</section>
+
+<footer>
+    <p>&copy; 2024 Duvan Aldrey Garcia Marimon</p>
+</footer>
+
+<script>
+    function showSection(sectionId) {
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+        document.getElementById(sectionId).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
